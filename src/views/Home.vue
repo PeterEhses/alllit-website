@@ -1,18 +1,47 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeroMain/>
+    <div id="features">
+      <h2>Features</h2>
+      <middle-text imgsrc="https://images.unsplash.com/photo-1544981037-82284dcf0a0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+      content="alllit features three main areas to make the main stages of your lighting design project organized and agile."
+      style="scroll-snap-align: start;"
+      :bottomgrad="{
+        s2: false
+      }"
+      />
+      <Devices style="scroll-snap-align: start;"/>
+      <Editor style="scroll-snap-align: start;"/>
+      <Mapping style="scroll-snap-align: start;"/>
+      <Variability style="scroll-snap-align: start;"/>
+      <GettingStarted style="scroll-snap-align: start;"/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import HeroMain from '@/components/HeroMain.vue'
+import Mapping from '@/components/Mapping.vue'
+import Editor from '@/components/Editor.vue'
+import Devices from '@/components/Devices.vue'
+import Variability from '@/components/Variability.vue'
+import GettingStarted from '@/components/GettingStarted.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    HeroMain,
+    Mapping,
+    Editor,
+    Devices,
+    Variability,
+    GettingStarted
   }
 }
 </script>
+
+<style lang="scss">
+:root{
+  scroll-snap-type: y proximity;
+}
+</style>
