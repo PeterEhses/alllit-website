@@ -208,6 +208,41 @@ export default {
     fill: var(--text-color);
   }
 }
-
-
+@media (max-width: 1080px){
+  #gettingstarted{
+    & .hooper-pagination{
+      display: none;
+    }
+    flex-direction: column-reverse;
+    min-height: 100vh;
+    & .carousel{
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+    }
+    & .startedtext{
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 75%;
+      padding: 0;
+      margin: 0;
+      & h3{
+        margin: .4em 0;
+      }
+    }
+  }
+}
+@media (max-width: 450px){
+  .carousel {
+    & .icon{
+      width: 3em;
+    }
+    & .carcomp{
+      padding: 1em;
+    }
+  }
+}
 </style>

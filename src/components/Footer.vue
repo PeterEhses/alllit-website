@@ -59,7 +59,7 @@ export default {
   padding-top: $safespace;
   position: relative;
   width: 100%;
-  height: 33vh;
+  min-height: 33vh;
   background: var(--bg-primary);
 }
 footer{
@@ -88,7 +88,7 @@ footer{
   width: 25%;
 
   & .top{
-    height: 50%;
+    min-height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +99,7 @@ footer{
     }
   }
   & .bottom{
+    margin-top: 1em;
     & img{
       font-size: $size-0;
       width: 1em;
@@ -110,4 +111,61 @@ footer{
     margin-bottom: $safespace;
   }
 }
+
+@media (max-width: 900px){
+  #footer{
+    height: auto;
+  }
+  footer{
+    flex-direction: column;
+    align-items: stretch;
+    //flex-wrap: wrap;
+    & .footersection:nth-child(1){
+      background: var(--secondary-color);
+    }
+    & .footersection:nth-child(2){
+      background: var(--grad-color);
+    }
+    & .footersection:nth-child(3){
+      background: var(--primary-color);
+    }
+    & .footersection:nth-child(4){
+      background: var(--bg-primary);
+    }
+
+    & .footersection{
+      width: 100%;
+      height: 12.5vh;
+      flex-direction: row;
+
+      & .top{
+        justify-content: center;
+        height: auto;
+        width: 75%;
+        & h5{
+          margin: 0;
+          margin-bottom: .64em;
+        }
+        margin: 0;
+      }
+      & .bottom{
+        width: 25%;
+        margin: 0;
+        overflow: hidden;
+      }
+    }
+  }
+  @media (max-height: 900px){
+    footer .footersection{
+      height: auto;
+      padding: 1em 0;
+    }
+  }
+}
+@media (max-width: 390px){
+  footer .footersection .bottom a{
+    font-size: $size-fineprint;
+  }
+}
+
 </style>

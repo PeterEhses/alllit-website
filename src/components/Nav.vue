@@ -28,7 +28,7 @@ export default {
   data(){
     return {
       windowTop: 0,
-      folded: true,
+      folded: false,
     }
   },
   computed: {
@@ -124,6 +124,15 @@ export default {
 }
 
 @media (max-width: 1200px) {
+  #nav{
+    position: absolute;
+    &.downsize{
+      position: fixed;
+      top: -120px;
+    }
+}
+}
+@media (max-height: 700px) {
   #nav{
     position: absolute;
     &.downsize{

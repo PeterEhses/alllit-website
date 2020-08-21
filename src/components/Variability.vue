@@ -2,7 +2,7 @@
   <article id="variability">
     <image-text
     title="your way is the way"
-    body="to truly fit your specific usecase, alllit is fully customizable. apart from the usual light and dark themes, we added two extra dark themes for cases where spill light matters"
+    body="To truly fit your specific usecase, alllit is fully customizable. Apart from the usual light and dark themes for easy viewing, we added two extra dark themes for cases where spill light matters."
     imgsrc2="/img/farb varianten.png"
     direction="left"
     :gradients="[0,0,0,0]"
@@ -106,6 +106,45 @@ export default {
     display: flex;
     justify-content: center;
     width: 25%;
+    min-height: 10em;
+  }
+}
+@media (max-width: 900px){
+  .slido{
+    flex-wrap: wrap;
+    height: 66vh;
+    & .slideros{
+      justify-content: center;
+      flex-grow: 1;
+      & .slido{
+        margin: 0;
+      }
+    }
+  }
+  .slido :nth-child(1) {
+    order: 2;
+    margin-right: 25%;
+  }
+  .slido :nth-child(2) {
+
+    order: 1;
+    width: 50%;
+    margin: 0 25%;
+    & p{
+      margin: 0;
+    }
+  }
+  .slido :nth-child(3) {
+
+    order: 3;
+    margin-right: 25%;
+  }
+}
+@media (max-width: 500px){
+  .slido .texto{
+    width: 100%;
+    margin: 0;
+    padding: 2em;
   }
 }
 </style>

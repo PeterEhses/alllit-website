@@ -223,6 +223,12 @@ input[type="number"] {
   min-height: 100vh;
 }
 
+kbd{
+  background: var(--secondary-color);
+  padding: 0 .2em;
+  border-radius: $radius-s;
+}
+
 /* breakpoints to mobile */
 
 @media (max-width: 1350px) {}

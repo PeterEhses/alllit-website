@@ -67,4 +67,16 @@ export default {
     //border-radius: $radius-l;
   }
 }
+@media (max-width: 900px){
+  .middletext{
+    height: auto;
+    & h4{
+        font-size: $size-3;
+    }
+  }
+  .container{
+    margin: 0 2em;
+  }
+
+}
 </style>

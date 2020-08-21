@@ -3,10 +3,20 @@
     <image-text
     title="everything where you’d expect it"
     body="allit’s code editor comes with everything you are used to from common applications, combined into an easy to digest, beginner friendly package. If you are familiar with Atom, Processing, VSCode or similar IDEs, you will find your way around it immediately.
-You’ll find a live preview next to the editor, to get immediate visual feedback from anything you change in the code. For your advanced file needs, the editor is fully integrated with the system file explorer and the electron console. Import your existing files and get the feedback you know.
 "
-    imgsrc2="/img/Group 241.png"
+    imgsrc2="/img/Group 239.png"
     direction="left"
+    :s3="false"
+    :gradients="[80, 20, 50, 0]"
+    />
+    <image-text
+    title=""
+    body="You’ll find a live preview next to the editor, to get immediate visual feedback from anything you change in the code. For your advanced file needs, the editor is fully integrated with the system file explorer and the electron console. Import your existing files and get the feedback you know.
+"
+    imgsrc2="/img/Group 240.png"
+    imgsrc="/img/blank1x1.png"
+    direction="left"
+    imsize="small"
     :s3="false"
     :gradients="[80, 20, 50, 0]"
     />

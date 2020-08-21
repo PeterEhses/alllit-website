@@ -132,7 +132,6 @@ export default {
       }
 
       if (!this.s3) {
-        console.log("yeet")
         gc[2] = cbg
       }
 
@@ -196,13 +195,14 @@ export default {
     getDims() {
       console.dir(this.$refs['deco'])
       console.dir(this.$el)
+      this.el = this.$el
       this.windowWidth = document.body.clientWidth
       this.selfOffset = offsetLeft(this.$refs.deco);
       this.selfWidth = this.$refs['deco'].clientWidth
     }
   },
   mounted() {
-    this.getDims();
+
     let that = this
     this.$el.addEventListener('resize', () => {
       that.getDims()
@@ -210,6 +210,9 @@ export default {
     window.addEventListener('resize', () => {
       that.getDims()
     })
+
+    this.getDims();
+    setTimeout(() => this.getDims(), 200);
   },
   beforeDestroy() {
     let that = this

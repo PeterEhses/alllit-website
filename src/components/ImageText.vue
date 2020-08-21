@@ -1,7 +1,7 @@
 <template>
   <div :class="['imagetext', direction, imsize, centertext]">
     <div class="imagecontainer first" v-if="imgsrc2">
-      <all-container :src="imgsrc2" class="image"  :gradients="grads" :s1="s1" :s2="s2" :s3="s3">
+      <all-container :src="imgsrc2" :class="['image', imgsrc2 == '/img/blank1x1.png' ? 'blank' : '']"  :gradients="grads" :s1="s1" :s2="s2" :s3="s3">
         <ColorPicker v-if="imgsrc2=='gradientGoesHere'"/>
         <img :src="imgsrc2" v-else>
       </all-container>
@@ -11,7 +11,7 @@
       <p v-if="body" v-html="body"></p>
     </div>
     <div class="imagecontainer second" v-if="imgsrc">
-      <all-container :src="imgsrc" class="image"  :gradients="grads" :s1="s1" :s2="s2" :s3="s3">
+      <all-container :src="imgsrc" :class="['image', imgsrc == '/img/blank1x1.png' ? 'blank' : '']"  :gradients="grads" :s1="s1" :s2="s2" :s3="s3">
         <img :src="imgsrc">
       </all-container>
     </div>
@@ -180,6 +180,71 @@ export default {
       width: 50%;
     padding: $space-header calc(#{$space-header} + 12.5%);
 
+    }
+  }
+}
+
+@media (max-width: 1080px){
+  .large .imagecontainer{
+    width: 50%;
+    padding: $space-header*2;
+  }
+  .small .text{
+    width: 50%;
+  }
+  .centertext.left,
+  .centertext.right{
+    & .imagecontainer.first{
+      width: 25%;
+      padding: $space-header;
+
+  }
+  & .imagecontainer.second{
+
+      width: 25%;
+    padding: $space-header;
+  }
+}
+}
+@media (max-width: 800px){
+
+  .blank{
+    display: none;
+  }
+
+  .imagetext{
+    flex-direction: column-reverse;
+    // flex-wrap: wrap;
+
+    & .text{
+      width: 100%;
+      margin-bottom: 1em;
+      padding: 1em $space-header;
+    }
+    &.left,
+    &.right{
+      & .imagecontainer{
+
+        &.first,
+        &.second{
+          max-width: 100%;
+          width: auto;
+          height: auto;
+          max-height: auto;
+          & .image{
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            max-height: 66vh;
+            & img{
+              max-width: 100%;
+              width: auto;
+              max-height: 66vh;
+            }
+          }
+        }
+
+      }
     }
   }
 }
