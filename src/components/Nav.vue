@@ -14,7 +14,7 @@
           <router-link to="/" ref="firstelem">Home</router-link>
           <router-link to="/#features" >Features</router-link>
           <router-link to="/#gettingstarted">Get Started</router-link>
-          <a href="https://alllit.peter-ehses.de" target="_blank">Documentation</a>
+          <a href="https://system.alllit.peter-ehses.de" target="_blank">Documentation</a>
           <a href="https://github.com/PeterEhses/alllit" target="_blank">Contribute</a>
         </div>
       </div>
