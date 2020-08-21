@@ -14,7 +14,7 @@
         <HueColorPicker :color="sec" @dragged="changeSecCol"/>
       </div>
       <div class="texto">
-        <p>for all your further customization needs, you can change pretty much anything from fonts to code syntax to accent colors from the settings. In fact, if you're on Google Chrome, you can change the accent colors for this site just like in the app. <strong>Try the sliders!</strong></p>
+        <p>For all your further customization needs, you can change pretty much anything from fonts to code syntax to accent colors from the settings. In fact, if you're on Google Chrome, you can change the accent colors for this site just like in the app. <strong>Try the sliders!</strong></p>
       </div>
       <div class="slideros">
         <HueColorPicker :color="prim" @dragged="changePrimCol"/>
@@ -91,7 +91,7 @@ export default {
 
 .slido{
   display: flex;
-  height: 50vh;
+  min-height: 50vh;
   & .texto{
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ export default {
 @media (max-width: 900px){
   .slido{
     flex-wrap: wrap;
-    height: 66vh;
+    min-height: 40vh;
     & .slideros{
       justify-content: center;
       flex-grow: 1;

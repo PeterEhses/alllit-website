@@ -10,10 +10,10 @@
         s2: false
       }"
       />
-      <Devices style="scroll-snap-align: start;"/>
-      <Editor style="scroll-snap-align: start;"/>
-      <Mapping style="scroll-snap-align: start;"/>
-      <Variability style="scroll-snap-align: start;"/>
+      <Devices/>
+      <Editor/>
+      <Mapping/>
+      <Variability/>
       <GettingStarted style="scroll-snap-align: start;"/>
     </div>
   </div>
